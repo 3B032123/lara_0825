@@ -76,4 +76,6 @@ Route::get('/', function () {
     /*刪除多筆資料
     Post::destroy(3, 5, 7);
     */
+    $allPosts = Post::all();
+    dd($allPosts);
 });
