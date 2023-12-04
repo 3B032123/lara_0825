@@ -47,6 +47,13 @@ Route::get('/', function () {
     }
     dd($posts);
     */
+    /*
     $posts = Post::where('id', '<', 10) -> orderby('id', 'DESC')->get();
     dd($posts);
+    */
+    $post = Post::find(1);
+    $post->update([
+        'title' => 'updated title',
+        'content' => 'updated content'
+    ]);
 });
