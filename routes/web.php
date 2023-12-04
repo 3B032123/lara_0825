@@ -58,8 +58,22 @@ Route::get('/', function () {
         'content' => 'updated content'
     ]);
     */
+    /*
     $post = Post::find(1);
     $post -> title = 'saved title';
     $post -> content = 'saved content';
     $post -> save();
+    */
+    /*使用delete()刪除
+    $post = Post::find(1);
+    $post -> delete();
+    */
+
+    /*使用destroy()刪除
+    Post::destroy(2);
+    */
+
+    /*刪除多筆資料
+    Post::destroy(3, 5, 7);
+    */
 });
