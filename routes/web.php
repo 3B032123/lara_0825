@@ -88,6 +88,19 @@ Route::get('/', function () {
     $fourthPost = Post::find(4);
     dd($fourthPost);
     */
+    /*
     $lastPost = Post::orderBy('id', 'DESC') -> first();
     dd($lastPost);
+    */
+    /*Post 透過 comments() 擷取其所有評論$comments*/
+    $post = Post::find(6);
+    echo '標題：' . $post -> title . '<br>';
+    echo '內容：' . $post -> content . '<br>';
+    echo '---------------------------' . '<br>';
+    //$comments = $post -> comments() -> get();
+    $comments = $post -> comments;
+    foreach ($comments as $comment) {
+        echo '留言：' . $comment -> content . '<br>';
+        echo '#######################' . '<br>';
+    }
 });
