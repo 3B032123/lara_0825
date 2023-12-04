@@ -35,6 +35,7 @@ Route::get('/', function () {
     echo '內容：' . $post -> content . '<br>';
     dd($post); //dump and die
     */
+    /*
     $post = new Post();
     $posts = Post::all();
     foreach ($posts as $post){
@@ -44,5 +45,8 @@ Route::get('/', function () {
         echo '張貼時間：' . $post -> created_at . '<br>';
         echo '----------------------------' . '<br>';
     }
+    dd($posts);
+    */
+    $posts = Post::where('id', '<', 10) -> orderby('id', 'DESC')->get();
     dd($posts);
 });
