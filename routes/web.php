@@ -76,6 +76,10 @@ Route::get('/', function () {
     /*刪除多筆資料
     Post::destroy(3, 5, 7);
     */
+    /*
     $allPosts = Post::all();
     dd($allPosts);
+    */
+    $featuredPosts = Post::where('is_feature', 1) -> get();
+    dd($featuredPosts);
 });
