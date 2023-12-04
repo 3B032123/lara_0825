@@ -84,6 +84,10 @@ Route::get('/', function () {
     $featuredPosts = Post::where('is_feature', 1) -> get();
     dd($featuredPosts);
     */
+    /*
     $fourthPost = Post::find(4);
     dd($fourthPost);
+    */
+    $lastPost = Post::orderBy('id', 'DESC') -> first();
+    dd($lastPost);
 });
